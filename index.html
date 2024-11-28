@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Bookmark demo</title>
+    <link rel="icon" href="Images/bookmark.png">
+  </head>
+  <body>
+    <h1 class="position-relative text-center mx-auto my-5 ">Bookmarker</h1>
+    <div
+      class="bookMark py-4 container position-relative d-flex flex-column align-items-center justify-content-center gap-4"
+    >
+      <div class="bookMark-title text-center fs-4 fw-bolder">
+        <i class="fa-solid fa-bookmark"></i>
+        <p class="d-inline">Bookmark your favorite sites</p>
+        <i class="fa-solid fa-bookmark"></i>
+      </div>
+      <!-- ---------------------------------------------------------site-name -->
+      <div class="siteName w-100">
+        <label for="" class="my-2 fw-bold">
+          <i class="fa-solid fa-book-bookmark me-3"></i>Site Name</label
+        >
+        <input
+          oninput="validationInputs(this)"
+          id="siteNameId"
+          type="text"
+          class="form-control"
+          placeholder="Bookmark Name"
+        />
+      </div>
+      <!-- ---------------------------------------------------------site-URL -->
+      <div class="siteUrl fw-bold w-100">
+        <label for="" class="my-2"
+          ><i class="fa-solid fa-link me-3"></i>Site URL
+        </label>
+        <input
+          oninput="validationInputs(this)"
+          id="siteUrlId"
+          type="url"
+          class="form-control"
+          placeholder="Website URL"
+        />
+      </div>
+      <button
+        onclick="addlink()"
+        class="btn-sumbit text-white py-2 px-5 border border-0 rounded"
+      >
+        Submit
+      </button>
+    </div>
+    <div class="container my-4">
+      <table class="w-100">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="showAllLinks">
+        </tbody>
+      </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
